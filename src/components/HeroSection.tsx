@@ -1,6 +1,5 @@
-import { ArrowRight, CheckCircle, Play, Sparkles, Volume2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState } from 'react';
 
 interface HeroSectionProps {
   onCtaClick: () => void;
@@ -9,8 +8,6 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnlocked }: HeroSectionProps) {
-  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
-
   return (
     <section 
       id="hero" 
@@ -179,123 +176,20 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           <span>👇 Assista o vídeo abaixo</span>
         </motion.div>
 
-        {/* 5. Classroom Video Mockup Player */}
+        {/* 5. Premium Cinematic VSL Player */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative w-full max-w-[340px] aspect-[9/16] bg-slate-100 rounded-[32px] p-2.5 shadow-2xl border-4 border-slate-200 overflow-hidden group/mock"
+          className="relative w-full max-w-[340px] aspect-[9/16] bg-slate-950 rounded-[32px] p-2.5 shadow-2xl border-4 border-slate-200 overflow-hidden"
         >
-          <div className="relative w-full h-full bg-slate-950 rounded-[22px] overflow-hidden flex flex-col justify-between">
-            
-            {!isPlayingVideo ? (
-              <>
-                {/* Backdrop image of a teacher presenting interactive materials */}
-                <img 
-                  src="https://images.unsplash.com/photo-1544535830-9d5a477db533?w=500&h=880&fit=crop&q=80" 
-                  alt="Professora ensinando Ciências" 
-                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80"
-                  referrerPolicy="no-referrer"
-                />
-
-                {/* Subtle dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40 z-10"></div>
-
-                {/* Top decorative element */}
-                <div className="z-20 p-4 w-full flex justify-between items-center">
-                  <span className="text-[10px] bg-brand-green/90 text-white font-extrabold px-2.5 py-1 rounded-full font-mono uppercase tracking-widest">
-                    DEMO 100% PRÁTICA
-                  </span>
-                </div>
-
-                {/* Play Button Trigger */}
-                <div className="z-20 my-auto mx-auto text-center space-y-3">
-                  <button 
-                    onClick={() => setIsPlayingVideo(true)}
-                    className="w-16 h-16 rounded-full bg-brand-green hover:bg-brand-green-hover text-white flex items-center justify-center shadow-xl shadow-brand-green/40 transform hover:scale-110 active:scale-95 transition-all mx-auto border-4 border-white/20 cursor-pointer"
-                  >
-                    <Play className="w-7 h-7 fill-white translate-x-0.5" />
-                  </button>
-                  <p className="text-[11px] text-white/90 font-black max-w-[200px] mx-auto drop-shadow uppercase tracking-wider">
-                    Clique para iniciar demonstração
-                  </p>
-                </div>
-
-                {/* Interactive Player Controls mimicking Wistia style in the screenshot */}
-                <div className="z-20 p-4 w-full space-y-2">
-                  
-                  {/* Captions/Subtitles overlay */}
-                  <div className="text-center px-2 py-1.5 bg-black/60 backdrop-blur-xs rounded-lg border border-white/10">
-                    <p className="text-[11px] text-white font-bold tracking-tight">
-                      SE TODA SEMANA SUA AULA FOR ASSIM...
-                    </p>
-                  </div>
-
-                  {/* Wistia bar mockup */}
-                  <div className="flex items-center gap-2 bg-brand-green text-white px-3 py-2 rounded-xl text-[10px] font-bold shadow-md">
-                    <span>0:02</span>
-                    <div className="flex-1 h-1 bg-white/30 rounded-full relative overflow-hidden">
-                      <div className="absolute left-0 top-0 bottom-0 w-[15%] bg-white rounded-full"></div>
-                    </div>
-                    <span className="font-black italic text-emerald-100 tracking-tighter text-xs">wistia</span>
-                  </div>
-                </div>
-              </>
-            ) : (
-              // Playing simulated video demo
-              <div className="w-full h-full relative bg-slate-950 z-20 flex flex-col justify-between p-4">
-                <div className="absolute inset-0 grid-pattern opacity-10"></div>
-                
-                <div className="z-10 flex justify-between items-center">
-                  <span className="text-[9px] bg-emerald-800 text-emerald-100 font-mono px-2 py-0.5 rounded">
-                    EF06CI05 • Célula 3D
-                  </span>
-                  <button
-                    onClick={() => setIsPlayingVideo(false)}
-                    className="text-[10px] font-bold text-slate-400 hover:text-white bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800 cursor-pointer"
-                  >
-                    Voltar
-                  </button>
-                </div>
-
-                <div className="z-10 relative w-full aspect-square bg-emerald-950/80 border border-emerald-800 rounded-2xl p-4 flex flex-col justify-between overflow-hidden shadow-xl my-auto">
-                  <div className="absolute inset-4 border-2 border-dashed border-emerald-500/30 rounded-xl flex items-center justify-center">
-                    <motion.div 
-                      animate={{ scale: [1, 1.08, 1], rotate: [0, 8, -8, 0] }}
-                      transition={{ repeat: Infinity, duration: 3 }}
-                      className="text-5xl"
-                    >
-                      ✂️
-                    </motion.div>
-                  </div>
-                  <span className="text-[9px] text-emerald-300 font-mono">Atividade Prática #23</span>
-                  <p className="text-xs font-bold text-white text-center z-10 uppercase tracking-wider">Montando Organelas</p>
-                  <span className="text-[8px] text-slate-400 font-mono self-end">BNCC Alinhado</span>
-                </div>
-
-                {/* Interactive captions and timeline controls playing */}
-                <div className="z-10 space-y-2">
-                  <div className="text-center px-2 py-1.5 bg-emerald-950/90 border border-emerald-800 rounded-lg">
-                    <p className="text-[10px] text-emerald-300 font-black tracking-tight">
-                      "Olha como encaixa perfeitamente a mitocôndria!"
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 bg-emerald-600 text-white px-3 py-2 rounded-xl text-[10px] font-bold">
-                    <span>0:14</span>
-                    <div className="flex-1 h-1 bg-white/30 rounded-full relative overflow-hidden">
-                      <motion.div 
-                        animate={{ width: ['0%', '100%'] }} 
-                        transition={{ repeat: Infinity, duration: 8, ease: 'linear' }} 
-                        className="absolute left-0 top-0 bottom-0 bg-white rounded-full"
-                      />
-                    </div>
-                    <span className="font-black italic text-emerald-200 tracking-tighter text-xs animate-pulse">wistia</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
+          <div className="w-full h-full rounded-[22px] overflow-hidden">
+            <div 
+              className="w-full h-full"
+              dangerouslySetInnerHTML={{
+                __html: `<wistia-player media-id="u1cm2sej87" aspect="0.5625" style="display: block; width: 100%; height: 100%;"></wistia-player>`
+              }}
+            />
           </div>
         </motion.div>
 
