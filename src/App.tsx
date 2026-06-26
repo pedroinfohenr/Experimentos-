@@ -3,9 +3,11 @@ import HeaderBanner from './components/HeaderBanner';
 import HeroSection from './components/HeroSection';
 import StatsBar from './components/StatsBar';
 import ProblemSection from './components/ProblemSection';
+import DeliverablesSection from './components/DeliverablesSection';
 import MaterialPreview from './components/MaterialPreview';
 import BonusesSection from './components/BonusesSection';
 import PricingSection from './components/PricingSection';
+import GuaranteeSection from './components/GuaranteeSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
@@ -94,6 +96,9 @@ export default function App() {
       {/* 5. Problems pain points block matching Image 2 */}
       <ProblemSection onCtaClick={scrollToPricing} />
 
+      {/* New Deliverables Details Section */}
+      <DeliverablesSection onCtaClick={scrollToPricing} />
+
       {/* 7. Interactive visual device frame previews matching Image 4 */}
       <MaterialPreview onCtaClick={scrollToPricing} />
 
@@ -125,6 +130,9 @@ export default function App() {
           redirectToCheckout('https://pay.wiapy.com/YeaKBenvRQS');
         }}
       />
+
+      {/* 7-Day Money-Back Guarantee Section */}
+      <GuaranteeSection />
 
       {/* 12. Accordion FAQ checklist matching Image 8 */}
       <FAQSection />

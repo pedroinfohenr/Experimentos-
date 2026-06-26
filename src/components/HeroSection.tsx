@@ -11,7 +11,7 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
   return (
     <section 
       id="hero" 
-      className="relative flex flex-col items-center justify-center pt-6 md:pt-10 pb-16 overflow-hidden bg-white"
+      className="relative flex flex-col items-center justify-center pt-3 md:pt-8 pb-10 md:pb-16 overflow-hidden bg-white"
     >
       {/* Floating abstract decorative background elements with science green smoke and experiment effects */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -131,14 +131,14 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
         </motion.div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 text-center space-y-6 z-10 flex flex-col items-center">
+      <div className="max-w-4xl mx-auto px-6 md:px-12 text-center space-y-4 md:space-y-6 z-10 flex flex-col items-center">
         
         {/* 1. Verified Badges Row matching Image */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-blue-50/60 text-slate-700 text-xs md:text-sm font-semibold rounded-full border border-blue-100 shadow-sm"
+          className="inline-flex items-center gap-1 px-3 py-1 bg-blue-50/60 text-slate-700 text-[10px] md:text-sm font-semibold rounded-full border border-blue-100 shadow-sm"
         >
           <span className="text-amber-400">⭐⭐⭐⭐⭐</span>
           <span>Aprovado por <strong className="text-brand-green font-bold">+1.200 professores</strong> de Ciências</span>
@@ -149,10 +149,10 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-2xl sm:max-w-3xl mx-auto px-1"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight font-display leading-[1.1] drop-shadow-xs text-slate-800">
-            <span className="text-brand-green font-display">365 Experimentos de Ciências</span> para um Ano Inteiro de Aulas Mais Práticas
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight font-display leading-[1.15] md:leading-[1.1] drop-shadow-xs text-slate-800">
+            Pare de <span className="text-[#039D1F] font-black">perder horas</span> procurando experimentos e planejando aulas de Ciências <span className="text-[#039D1F] font-black">do zero</span>.
           </h1>
         </motion.div>
 
@@ -161,9 +161,9 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 font-medium leading-relaxed"
+          className="max-w-2xl mx-auto text-xs sm:text-sm md:text-lg text-slate-500 font-medium leading-relaxed"
         >
-          Acesse <span className="text-[#039D1F] font-black">mais de 365 experimentos prontos</span> para aplicar em sala com alunos de <span className="text-slate-800 font-bold">10 a 15 anos</span>, tudo 100% <span className="text-[#039D1F] font-black">alinhado à BNCC</span>
+          Receba <span className="text-[#039D1F] font-black">365 experimentos</span>, <span className="text-[#039D1F] font-black">100 avaliações</span> e <span className="text-[#039D1F] font-black">50 atividades prontas</span> para praticamente um ano inteiro de aulas mais práticas.
         </motion.p>
 
         {/* 4. Small video pointer text */}
@@ -171,46 +171,46 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xs sm:text-sm font-bold text-slate-700 flex items-center gap-1 bg-amber-50 px-3 py-1 rounded-full border border-amber-100"
+          className="text-[10px] sm:text-sm font-bold text-slate-700 flex items-center gap-1 bg-amber-50 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-amber-100"
         >
           <span>👇 Assista o vídeo abaixo</span>
         </motion.div>
 
-        {/* 5. Premium Cinematic VSL Player */}
+        {/* 5. Premium Cinematic VSL Player - Sized down dynamically for mobile and desktop first-fold view */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative w-full max-w-[340px] aspect-[9/16] bg-slate-950 rounded-[32px] p-2.5 shadow-2xl border-4 border-slate-200 overflow-hidden"
+          className="relative w-full max-w-[170px] xs:max-w-[190px] sm:max-w-[215px] md:max-w-[250px] aspect-[9/17.5] bg-slate-950 rounded-[20px] xs:rounded-[24px] md:rounded-[32px] p-1.5 md:p-2.5 shadow-2xl border-2 md:border-4 border-slate-200 overflow-hidden"
         >
-          <div className="w-full h-full rounded-[22px] overflow-hidden">
+          <div className="w-full h-full rounded-[14px] xs:rounded-[18px] md:rounded-[22px] overflow-hidden">
             <div 
               className="w-full h-full"
               dangerouslySetInnerHTML={{
-                __html: `<wistia-player media-id="u1cm2sej87" aspect="0.5625" style="display: block; width: 100%; height: 100%;"></wistia-player>`
+                __html: `<wistia-player media-id="u1cm2sej87" aspect="0.514" style="display: block; width: 100%; height: 100%;"></wistia-player>`
               }}
             />
           </div>
         </motion.div>
 
-        {/* 6. Green CTA Button styled exactly like the screenshot button below the video card */}
+        {/* 6. Green CTA Button sized exactly to match the width of the video player above */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="pt-2 w-full max-w-sm"
+          className="pt-1 w-full max-w-[170px] xs:max-w-[190px] sm:max-w-[215px] md:max-w-[250px]"
         >
           <motion.button
             onClick={onCtaClick}
             animate={{ scale: [1, 1.03, 1] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="w-full py-4.5 bg-[#05b41b] hover:bg-[#049e18] text-white rounded-2xl font-black text-sm md:text-base tracking-wide uppercase transition-all duration-300 shadow-xl shadow-emerald-700/20 flex items-center justify-center gap-2 cursor-pointer active:scale-95 font-display"
+            className="w-full py-2.5 md:py-3.5 bg-[#05b41b] hover:bg-[#049e18] text-white rounded-xl md:rounded-2xl font-black text-[9px] xs:text-[10px] sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 shadow-xl shadow-emerald-700/20 flex items-center justify-center gap-1.5 cursor-pointer active:scale-95 font-display"
           >
-            Quero Acessar Agora
-            <ArrowRight className="w-5 h-5 animate-pulse" />
+            Quero meus 365 experimentos
+            <ArrowRight className="w-3.5 h-3.5 md:w-4.5 md:h-4.5 animate-pulse shrink-0" />
           </motion.button>
           
-          <span className="text-[11px] text-slate-400 font-semibold mt-2.5 block">
+          <span className="text-[9px] md:text-[10px] text-slate-400 font-semibold mt-2 block">
             ✓ Acesso imediato • Pagamento Único • Garantia de 7 dias
           </span>
         </motion.div>

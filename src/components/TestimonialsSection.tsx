@@ -4,15 +4,15 @@ import { motion } from 'motion/react';
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="py-20 bg-[#0bae04] border-y border-[#215d01]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="depoimentos" className="py-10 md:py-20 bg-[#0bae04] border-y border-[#215d01]">
+      <div className="max-w-6xl mx-auto px-8">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs md:text-sm font-extrabold text-[#061c01] uppercase tracking-widest block mb-3 font-mono">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+          <span className="text-xs md:text-sm font-extrabold text-[#061c01] uppercase tracking-widest block mb-2 font-mono">
             — QUEM JÁ USA, RECOMENDA
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight font-display leading-tight">
+          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight font-display leading-tight">
             +12 mil professores{' '}
             <span className="text-[#024402] relative inline-block">
               transformaram
@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {testimonials.map((test, idx) => (
             <motion.div
               key={test.id}
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-100 rounded-3xl p-5 md:p-8 shadow-sm flex flex-col justify-between space-y-4 md:space-y-6 hover:shadow-md transition-shadow"
             >
               <div className="space-y-4">
                 {/* 5 Stars */}

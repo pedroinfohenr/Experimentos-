@@ -190,33 +190,28 @@ export const testimonials: Testimonial[] = [
 export const faqs: FAQItem[] = [
   {
     id: 'f1',
-    question: 'Como recebo o material depois da compra?',
-    answer: 'O acesso é enviado imediatamente após a aprovação do pagamento por e-mail. Você receberá um link exclusivo com login e senha para baixar todos os materiais em PDF.'
+    question: 'O acesso chega na hora?',
+    answer: 'Sim, o acesso é 100% imediato e automático! Assim que a confirmação do pagamento for concluída, você receberá um e-mail com seus dados de acesso exclusivos para baixar todos os arquivos organizados em PDF.'
   },
   {
     id: 'f2',
-    question: 'Funciona para qual série / faixa etária?',
-    answer: 'Atende perfeitamente turmas do Ensino Fundamental I, Fundamental II e Ensino Médio. As atividades são divididas e categorizadas por faixa etária e alinhamento à BNCC.'
+    question: 'Serve para quais níveis e idades?',
+    answer: 'O material foi desenvolvido especificamente para alunos de 10 a 15 anos (Ensino Fundamental II). Todos os experimentos, avaliações e dinâmicas são 100% alinhados às diretrizes e competências da BNCC para essa faixa etária.'
   },
   {
     id: 'f3',
-    question: 'Preciso de internet para usar em aula?',
-    answer: 'Não! Você faz o download do material e pode imprimir ou projetar sem depender de conexão de internet.'
+    question: 'É pagamento único ou mensalidade?',
+    answer: 'É pagamento único! Você investe apenas uma vez e tem acesso vitalício a todo o conteúdo contratado, incluindo atualizações. Não há nenhuma taxa mensal, anuidade ou cobranças recorrentes adicionais.'
   },
   {
     id: 'f4',
-    question: 'Posso usar com várias turmas?',
-    answer: 'Sim! O material é de uso pessoal do professor, permitindo que você imprima e utilize com quantas turmas e alunos quiser.'
+    question: 'Qual a diferença entre o Pacote Básico e o Completo?',
+    answer: 'O Pacote Básico inclui o acervo completo de 365 experimentos práticos. Já o Pacote Completo (mais recomendado) inclui todos os 365 experimentos e adiciona mais 5 bônus premium exclusivos: 100 avaliações prontas, coleções de planos de aula, guias de planejamento prático e atividades de fixação.'
   },
   {
     id: 'f5',
-    question: 'E se eu não gostar?',
-    answer: 'Você tem 7 dias de garantia incondicional. Se não gostar, basta enviar um e-mail e devolvemos 100% do seu dinheiro, sem burocracia.'
-  },
-  {
-    id: 'f6',
-    question: 'As atualizações são realmente vitalícias?',
-    answer: 'No plano Premium, sim! Você recebe todas as novas dinâmicas, bônus e atualizações sem pagar nenhuma taxa adicional recorrente.'
+    question: 'E se eu não gostar do material?',
+    answer: 'Oferecemos uma Garantia Incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito com o material, basta enviar um e-mail em até 7 dias da sua compra que devolvermos 100% do seu dinheiro investido. Sem burocracia e sem perguntas.'
   }
 ];
 

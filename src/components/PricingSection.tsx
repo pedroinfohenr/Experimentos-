@@ -9,33 +9,33 @@ interface PricingSectionProps {
 
 export default function PricingSection({ onSelectPlan }: PricingSectionProps) {
   return (
-    <section id="planos" className="py-20 bg-white relative overflow-hidden grid-pattern">
+    <section id="planos" className="py-10 md:py-20 bg-white relative overflow-hidden grid-pattern">
       
       {/* Decorative colored blobs */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-amber-100/20 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-8 relative z-10">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-2 md:space-y-3">
           <span className="text-xs md:text-sm font-extrabold text-[#138200] uppercase tracking-widest block mb-1 font-mono">
             — ESCOLHA SEU PLANO
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight font-display leading-tight">
+          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight font-display leading-tight">
             Um material que se paga logo na sua{' '}
             <span className="text-[#07ae00] relative inline-block">
               primeira aula
               <span className="absolute left-0 bottom-1 w-full h-1 bg-green-200 rounded-full"></span>
             </span>
           </h2>
-          <p className="text-sm md:text-base font-medium text-slate-500 max-w-2xl mx-auto">
-            Recupere seus finais de semana e tenha um ano inteiro de experimentos prontos por menos de R$ 0,90 por dia.
+          <p className="text-xs sm:text-sm md:text-base font-medium text-slate-500 max-w-2xl mx-auto">
+            Recupere seus finais de semana e tenha um ano inteiro de experimentos prontos por menos de R$ 0,07 por dia.
           </p>
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto items-center">
           
           {plans.map((plan) => {
             const isPopular = plan.isPopular;
@@ -47,10 +47,10 @@ export default function PricingSection({ onSelectPlan }: PricingSectionProps) {
                   id={`plan-card-${plan.id}`}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ scale: 0.94 }}
+                  whileHover={{ scale: 0.98 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className="rounded-3xl p-6 md:p-8 bg-white border border-slate-200 text-slate-600 shadow-sm flex flex-col justify-between relative md:scale-90 transition-all duration-300"
+                  className="rounded-3xl p-5 md:p-8 bg-white border border-slate-200 text-slate-600 shadow-sm flex flex-col justify-between relative md:scale-95 transition-all duration-300"
                 >
                   {/* Card Title & Desc */}
                   <div className="space-y-5">
@@ -117,21 +117,21 @@ export default function PricingSection({ onSelectPlan }: PricingSectionProps) {
                   key={plan.id}
                   id={`plan-card-${plan.id}`}
                   initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1.03 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   animate={{ 
-                    scale: [1.03, 1.045, 1.03],
+                    scale: [1, 1.015, 1],
                     boxShadow: [
-                      "0 15px 35px -10px rgba(245, 158, 11, 0.25)",
-                      "0 20px 40px -5px rgba(245, 158, 11, 0.45)",
-                      "0 15px 35px -10px rgba(245, 158, 11, 0.25)"
+                      "0 10px 25px -5px rgba(245, 158, 11, 0.2)",
+                      "0 15px 35px 0px rgba(245, 158, 11, 0.35)",
+                      "0 10px 25px -5px rgba(245, 158, 11, 0.2)"
                     ]
                   }}
                   transition={{ 
-                    scale: { repeat: Infinity, duration: 2.5, ease: "easeInOut" },
-                    boxShadow: { repeat: Infinity, duration: 2.5, ease: "easeInOut" }
+                    scale: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                    boxShadow: { repeat: Infinity, duration: 3, ease: "easeInOut" }
                   }}
                   viewport={{ once: true }}
-                  className="rounded-3xl p-8 flex flex-col justify-between relative bg-white text-slate-800 border-[3.5px] border-amber-400 shadow-2xl z-20 overflow-hidden"
+                  className="rounded-3xl p-5 md:p-8 flex flex-col justify-between relative bg-white text-slate-800 border-[3px] border-amber-400 shadow-2xl z-20 overflow-hidden"
                 >
                   {/* Decorative diagonal shine effect */}
                   <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-amber-500/10 opacity-35 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }}></div>

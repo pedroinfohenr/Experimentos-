@@ -153,22 +153,22 @@ export default function BonusesSection() {
   ];
 
   return (
-    <section id="bonuses-section" className="py-20 bg-slate-50/50 border-y border-slate-100">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="bonuses-section" className="py-10 md:py-20 bg-slate-50/50 border-y border-slate-100">
+      <div className="max-w-4xl mx-auto px-8">
 
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+         {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-600 border border-blue-100 text-[10px] md:text-xs font-black rounded-full mb-3 uppercase tracking-wider">
             <span className="text-xs">🎁</span>
             <span>BÔNUS EXCLUSIVOS</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-black text-slate-800 tracking-tight font-display">
+          <h2 className="text-xl xs:text-2xl md:text-3xl font-black text-slate-800 tracking-tight font-display">
             E tem mais! Leve também:
           </h2>
         </div>
 
         {/* Bonuses Vertical Stack matching screenshot perfectly */}
-        <div className="space-y-4 md:space-y-5">
+        <div className="space-y-3 md:space-y-5">
           {bonuses.map((bonus, idx) => (
             <motion.div
               key={bonus.id}
@@ -176,16 +176,16 @@ export default function BonusesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08, duration: 0.4 }}
-              className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-6 shadow-xs flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 md:gap-6 hover:shadow-md transition-all duration-300"
+              className="bg-white border border-slate-200/60 rounded-2xl p-4 md:p-6 shadow-xs flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-6 hover:shadow-md transition-all duration-300"
             >
               {/* Illustration Thumbnail Box */}
-              <div className="w-24 h-24 md:w-28 md:h-28 shrink-0 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center p-2 relative overflow-hidden">
+              <div className="w-20 h-20 md:w-28 md:h-28 shrink-0 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center p-1.5 md:p-2 relative overflow-hidden">
                 {bonus.illustration}
               </div>
 
               {/* Title & Description Text Block */}
-              <div className="flex-1 space-y-1.5">
-                <h3 className="text-base md:text-lg font-black text-slate-800 leading-snug font-display">
+              <div className="flex-1 space-y-1">
+                <h3 className="text-sm md:text-lg font-black text-slate-800 leading-snug font-display">
                   {bonus.title}
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-medium">
@@ -197,8 +197,8 @@ export default function BonusesSection() {
         </div>
 
         {/* Highlighted Value Banner matching color palette and design */}
-        <div className="mt-10 md:mt-12">
-          <div className="bg-[#038f09] rounded-2xl p-6 md:p-8 text-center text-white font-sans relative overflow-hidden shadow-xl shadow-emerald-950/10">
+        <div className="mt-8 md:mt-12">
+          <div className="bg-[#038f09] rounded-2xl p-5 md:p-8 text-center text-white font-sans relative overflow-hidden shadow-xl shadow-emerald-950/10">
             {/* Background glowing circle decorator */}
             <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
             
@@ -206,12 +206,12 @@ export default function BonusesSection() {
               <span className="text-[10px] md:text-xs font-black tracking-widest text-emerald-100 uppercase block font-mono">
                 VALOR TOTAL DOS BÔNUS
               </span>
-              <span className="text-2xl md:text-3xl font-extrabold text-white/50 line-through tracking-tight block">
+              <span className="text-xl md:text-3xl font-extrabold text-white/50 line-through tracking-tight block">
                 R$ 205,00
               </span>
-              <div className="text-lg md:text-xl font-bold tracking-tight text-white flex flex-wrap items-center justify-center gap-1.5">
+              <div className="text-base md:text-xl font-bold tracking-tight text-white flex flex-wrap items-center justify-center gap-1.5">
                 <span>Inclusos</span>
-                <span className="bg-white text-[#038f09] px-2.5 py-1 rounded-lg font-black text-xs md:text-sm shadow-xs uppercase tracking-wider">
+                <span className="bg-white text-[#038f09] px-2 py-0.5 md:px-2.5 md:py-1 rounded-lg font-black text-[10px] md:text-sm shadow-xs uppercase tracking-wider">
                   GRÁTIS
                 </span>
                 <span>no Pacote Completo!</span>
