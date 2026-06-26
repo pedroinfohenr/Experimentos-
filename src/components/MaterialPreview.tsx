@@ -1,6 +1,13 @@
 import { ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
+// Import images as ES modules so Vite compiles and resolves them correctly
+import imagePressao from '../assets/images/pressao_card_1.png';
+import imageSentidos from '../assets/images/Sentidos_Card_5_Termocepcao (1).png';
+import imagePoluicao from '../assets/images/poluicao_card_1 (1).png';
+import imageCirculatorio from '../assets/images/Circulatorio_Card_1_BombaCoracao (1).png';
+import imageCardAr from '../assets/images/card_ar_6.png';
+
 interface MaterialPreviewProps {
   onCtaClick?: () => void;
 }
@@ -10,27 +17,27 @@ export default function MaterialPreview({ onCtaClick }: MaterialPreviewProps) {
     {
       title: "A Água que não Cai",
       description: "Experimento lúdico de pressão atmosférica que desafia a gravidade e fascina os alunos.",
-      image: "/src/assets/images/pressao_card_1.png"
+      image: imagePressao
     },
     {
       title: "Água Confusa (Termocepção)",
       description: "Investigação prática sobre percepção térmica relativa e como nossos sentidos funcionam.",
-      image: "/src/assets/images/Sentidos_Card_5_Termocepcao (1).png"
+      image: imageSentidos
     },
     {
       title: "Chuva Ácida na Prática",
       description: "Atividade demonstrativa mostrando o efeito do vinagre (ácido) no giz escolar.",
-      image: "/src/assets/images/poluicao_card_1 (1).png"
+      image: imagePoluicao
     },
     {
       title: "Bomba Cardíaca Caseira",
       description: "Construção de modelo prático para entender o bombeamento muscular do coração.",
-      image: "/src/assets/images/Circulatorio_Card_1_BombaCoracao (1).png"
+      image: imageCirculatorio
     },
     {
       title: "A Fonte na Garrafa!",
       description: "Experimento de pressão do ar demonstrando como forças empurram a água para fora.",
-      image: "/src/assets/images/card_ar_6.png"
+      image: imageCardAr
     }
   ];
 
