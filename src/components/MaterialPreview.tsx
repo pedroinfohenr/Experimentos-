@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 
 // Import images as ES modules so Vite compiles and resolves them correctly
 import imagePressao from '../assets/images/pressao_card_1.png';
-import imageSentidos from '../assets/images/Sentidos_Card_5_Termocepcao (1).png';
-import imagePoluicao from '../assets/images/poluicao_card_1 (1).png';
-import imageCirculatorio from '../assets/images/Circulatorio_Card_1_BombaCoracao (1).png';
+import imageSentidos from '../assets/images/sentidos_card_5_termocepcao.png';
+import imagePoluicao from '../assets/images/poluicao_card_1.png';
+import imageCirculatorio from '../assets/images/circulatorio_card_1_bombacoracao.png';
 import imageCardAr from '../assets/images/card_ar_6.png';
 
 interface MaterialPreviewProps {
