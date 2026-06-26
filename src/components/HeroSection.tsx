@@ -151,8 +151,8 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight font-display leading-[1.1] drop-shadow-xs" style={{ color: '#7d7c7c' }}>
-            <span className="text-brand-green font-display">+365 Experimentos de Ciências Prontos</span> para Aplicar em Sala de Aula
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight font-display leading-[1.1] drop-shadow-xs text-slate-800">
+            <span className="text-brand-green font-display">365 Experimentos de Ciências</span> para um Ano Inteiro de Aulas Mais Práticas
           </h1>
         </motion.div>
 
@@ -163,7 +163,7 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           transition={{ duration: 0.5, delay: 0.15 }}
           className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 font-medium leading-relaxed"
         >
-          Experimentos <span className="text-brand-green font-bold">Prontos</span> para um <span className="text-brand-green font-bold">Ano Inteiro de Aulas</span><br />Mais Práticas e Divertidas.
+          Acesse <span className="text-[#039D1F] font-black">mais de 365 experimentos prontos</span> para aplicar em sala com alunos de <span className="text-slate-800 font-bold">10 a 15 anos</span>, tudo 100% <span className="text-[#039D1F] font-black">alinhado à BNCC</span>
         </motion.p>
 
         {/* 4. Small video pointer text */}
