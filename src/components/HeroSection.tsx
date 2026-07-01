@@ -152,7 +152,7 @@ export default function HeroSection({ onCtaClick, onExploreLibraryClick, isUnloc
           className="max-w-2xl sm:max-w-3xl mx-auto px-1"
         >
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight font-display leading-[1.15] md:leading-[1.1] drop-shadow-xs text-slate-800">
-            Pare de <span className="text-[#039D1F] font-black">perder horas</span> procurando experimentos e planejando aulas de Ciências <span className="text-[#039D1F] font-black">do zero</span>.
+            Cansado de <span className="text-[#039D1F] font-black">perder tempo</span> planejando aulas de Ciências e procurando <span className="text-[#039D1F] font-black">novas atividades</span> toda semana?
           </h1>
         </motion.div>
 
