@@ -1,20 +1,20 @@
 import { motion } from 'motion/react';
-import { ShieldCheck, RefreshCw, HelpCircle, Zap } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export default function GuaranteeSection() {
   return (
-    <section id="garantia-incondicional" className="py-10 md:py-16 bg-emerald-50/40 border-y border-emerald-100/60 relative overflow-hidden">
+    <section id="garantia-incondicional" className="py-8 md:py-12 bg-emerald-50/40 border-y border-emerald-100/60 relative overflow-hidden">
       {/* Decorative subtle gradient background blobs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-100/25 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] bg-emerald-100/25 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-4xl mx-auto px-8 relative z-10 flex flex-col items-center text-center">
+      <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
         
         {/* 'Compre sem medo' Tag */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100/80 text-[#039D1F] border border-emerald-200 text-[10px] md:text-xs font-black rounded-full mb-5 uppercase tracking-wider"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100/80 text-[#039D1F] border border-emerald-200 text-[10px] md:text-xs font-black rounded-full mb-4 uppercase tracking-wider"
         >
           <ShieldCheck className="w-3.5 h-3.5" />
           <span>COMPRE SEM MEDO</span>
@@ -26,7 +26,7 @@ export default function GuaranteeSection() {
           whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
-          className="w-28 h-28 md:w-32 md:h-32 mb-5 drop-shadow-[0_8px_20px_rgba(3,157,31,0.12)] flex items-center justify-center relative select-none"
+          className="w-24 h-24 md:w-28 md:h-28 mb-4 drop-shadow-[0_8px_20px_rgba(3,157,31,0.12)] flex items-center justify-center relative select-none"
         >
           <svg viewBox="0 0 100 100" className="w-full h-full">
             <defs>
@@ -54,18 +54,18 @@ export default function GuaranteeSection() {
 
           {/* Center inner badge with large bold '7' and 'DIAS' */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
-            <span className="text-2xl md:text-3xl font-black leading-none tracking-tight font-display drop-shadow-sm">7</span>
-            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-none mt-0.5">DIAS</span>
+            <span className="text-xl md:text-2xl font-black leading-none tracking-tight font-display drop-shadow-sm">7</span>
+            <span className="text-[9px] font-black uppercase tracking-widest leading-none mt-0.5">DIAS</span>
           </div>
         </motion.div>
 
         {/* Copy / Text Content */}
-        <div className="max-w-2xl space-y-3.5 mb-6 md:mb-8">
+        <div className="max-w-xl space-y-2">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl lg:text-3xl font-black text-slate-800 tracking-tight font-display"
+            className="text-lg md:text-xl lg:text-2xl font-black text-slate-800 tracking-tight font-display"
           >
             Garantia Incondicional de 7 Dias
           </motion.h2>
@@ -75,54 +75,10 @@ export default function GuaranteeSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xs sm:text-sm md:text-base text-slate-500 font-medium leading-relaxed"
+            className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed"
           >
             Se por qualquer motivo você não ficar satisfeito com o material, basta enviar um e-mail em até 7 dias que devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
           </motion.p>
-        </div>
-
-        {/* Highlights Row: Reembolso total | Sem perguntas | Processo rápido */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-lg pt-5 border-t border-emerald-200/40">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.12 }}
-            className="flex items-center justify-center gap-2 bg-white px-3.5 py-2.5 rounded-xl border border-emerald-100/60 shadow-xs"
-          >
-            <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center">
-              <RefreshCw className="w-3 h-3 text-[#039D1F]" />
-            </div>
-            <span className="text-xs md:text-sm font-black text-slate-700">Reembolso total</span>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.18 }}
-            className="flex items-center justify-center gap-2 bg-white px-3.5 py-2.5 rounded-xl border border-emerald-100/60 shadow-xs"
-          >
-            <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center">
-              <HelpCircle className="w-3 h-3 text-[#039D1F]" />
-            </div>
-            <span className="text-xs md:text-sm font-black text-slate-700">Sem perguntas</span>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.24 }}
-            className="flex items-center justify-center gap-2 bg-white px-3.5 py-2.5 rounded-xl border border-emerald-100/60 shadow-xs"
-          >
-            <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center">
-              <Zap className="w-3 h-3 text-[#039D1F]" />
-            </div>
-            <span className="text-xs md:text-sm font-black text-slate-700">Processo rápido</span>
-          </motion.div>
-
         </div>
 
       </div>

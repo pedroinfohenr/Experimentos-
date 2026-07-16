@@ -30,15 +30,12 @@ export default function ProblemSection({ onCtaClick }: ProblemSectionProps) {
       <div className="max-w-4xl mx-auto px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14 space-y-1.5 md:space-y-2">
-          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight font-display">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14 space-y-2.5">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black text-slate-950 tracking-tight font-display">
             Sua <span className="text-[#009b0a]">Transformação</span>
           </h2>
-          <p className="text-xs md:text-sm font-bold text-slate-500">
-            Reconhece alguma dessas situações?
-          </p>
-          <p className="text-[11px] md:text-xs font-medium text-slate-400">
-            Veja como sua rotina vai mudar
+          <p className="text-base sm:text-lg md:text-2xl font-extrabold text-slate-700 max-w-2xl mx-auto leading-relaxed">
+            Veja como sua rotina vai mudar:
           </p>
         </div>
 

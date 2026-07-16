@@ -49,15 +49,12 @@ export default function MaterialPreview({ onCtaClick }: MaterialPreviewProps) {
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 px-8">
-          <span className="text-xs md:text-sm font-extrabold text-[#039D1F] uppercase tracking-widest block mb-2 md:mb-3 font-mono">
-            — PRÉVIA DOS MATERIAIS
-          </span>
-          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-black text-[#07b407] tracking-tight font-display leading-tight">
-            Veja uma prévia do que você vai receber
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 px-8 space-y-3">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black text-slate-950 tracking-tight font-display leading-tight">
+            Veja uma <span className="text-[#039D1F]">Prévia Real</span> do que vai receber
           </h2>
-          <p className="mt-2 md:mt-3 text-slate-500 text-xs sm:text-sm md:text-base font-medium max-w-xl mx-auto">
-            Abra os arquivos prontos, imprima e aplique em minutos. Nossos roteiros e recursos são totalmente ilustrados e alinhados à BNCC.
+          <p className="text-base sm:text-lg md:text-2xl font-extrabold text-slate-700 max-w-2xl mx-auto leading-relaxed">
+            Abra os <span className="text-[#039D1F]">arquivos prontos</span>, imprima e <span className="text-[#039D1F]">aplique em minutos</span>. Nossos roteiros e recursos são <span className="text-[#039D1F]">totalmente ilustrados</span> e 100% alinhados à BNCC.
           </p>
         </div>
 
@@ -100,64 +97,41 @@ export default function MaterialPreview({ onCtaClick }: MaterialPreviewProps) {
 
           </div>
 
-          {/* Secure / Delivery Badge Guarantee */}
-          <div className="mt-6 md:mt-8 mx-4 md:mx-6 flex flex-wrap justify-center gap-3 md:gap-5 items-center text-[10px] md:text-xs text-slate-500 font-medium bg-white px-4 md:px-6 py-2 md:py-3 rounded-full border border-slate-100 shadow-sm">
-            <span className="flex items-center gap-1.5 text-emerald-600 font-bold">
-              <ShieldCheck className="w-3.5 h-3.5 md:w-4 md:h-4" />
-              Acesso 100% Seguro
+          {/* High-Converting CTA Button: BAIXAR TUDO AGORA */}
+          <div className="mt-10 md:mt-14 flex justify-center w-full px-6">
+            <motion.button
+              onClick={onCtaClick}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto px-10 py-5 bg-[#039D1F] hover:bg-[#028018] text-white rounded-2xl font-black text-sm sm:text-lg uppercase tracking-wider shadow-xl shadow-[#039D1F]/20 flex items-center justify-center gap-2.5 cursor-pointer transition-all duration-300 font-display border border-[#039D1F]"
+            >
+              BAIXAR TUDO AGORA
+              <ArrowRight className="w-5 h-5 shrink-0 text-white" />
+            </motion.button>
+          </div>
+
+          {/* Bullets: cards dinamicos, facil impressao, as crianças amam!!! */}
+          <div className="mt-8 md:mt-12 mx-4 md:mx-6 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 items-center bg-white px-6 md:px-10 py-4 md:py-5 rounded-2xl border border-slate-100 shadow-md z-10 relative">
+            <span className="flex items-center gap-2 md:gap-2.5 text-slate-800 font-extrabold text-sm md:text-lg tracking-tight">
+              <span className="w-6 h-6 rounded-full bg-emerald-500/15 flex items-center justify-center text-[#039D1F] font-black text-sm shrink-0">✓</span>
+              Cards dinâmicos
             </span>
-            <span className="text-slate-300 hidden xs:inline">|</span>
-            <span className="flex items-center gap-1.5 text-slate-600 font-bold">
-              <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-emerald-500" />
-              Suporte WhatsApp
+            <span className="text-slate-200 hidden sm:inline">|</span>
+            <span className="flex items-center gap-2 md:gap-2.5 text-slate-800 font-extrabold text-sm md:text-lg tracking-tight">
+              <span className="w-6 h-6 rounded-full bg-emerald-500/15 flex items-center justify-center text-[#039D1F] font-black text-sm shrink-0">✓</span>
+              Fácil impressão
             </span>
-            <span className="text-slate-300 hidden xs:inline">|</span>
-            <span className="text-slate-600 font-bold">Liberação Imediata</span>
+            <span className="text-slate-200 hidden sm:inline">|</span>
+            <span className="flex items-center gap-2 md:gap-2.5 text-slate-800 font-extrabold text-sm md:text-lg tracking-tight">
+              <span className="w-6 h-6 rounded-full bg-emerald-500/15 flex items-center justify-center text-[#039D1F] font-black text-sm shrink-0">✓</span>
+              As crianças amam!!!
+            </span>
           </div>
 
         </div>
 
       </div>
 
-      {/* Transition block styled with our deep green palette */}
-      <div className="relative bg-gradient-to-br from-[#039D1F] to-[#028018] text-white py-12 md:py-20 mt-14 md:mt-20 overflow-hidden shadow-inner">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-10 left-10 w-28 h-28 border border-white rounded-full animate-pulse"></div>
-          <div className="absolute bottom-10 right-12 w-36 h-36 border-2 border-white/40 rounded-full"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto px-8 text-center relative z-10 flex flex-col items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="space-y-4 md:space-y-6"
-          >
-            <h3 className="text-lg xs:text-xl md:text-3xl font-black tracking-wide text-white font-display">
-              Pronto para transformar suas aulas?
-            </h3>
-            
-            <p className="text-xs sm:text-sm md:text-lg max-w-2xl mx-auto text-emerald-50 font-medium leading-relaxed">
-              Adquira hoje com desconto exclusivo e tenha em mãos o maior acervo prático do Brasil.
-            </p>
-
-            {/* Pulsing CTA button */}
-            <div className="pt-2 md:pt-4 flex justify-center w-full">
-              <motion.button
-                onClick={onCtaClick}
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 md:px-8 md:py-4.5 bg-[#0fc900] text-white font-black rounded-2xl text-xs md:text-base tracking-wider uppercase shadow-xl hover:bg-[#0ebd00] transition-all duration-300 cursor-pointer hover:shadow-2xl active:scale-95 font-display"
-              >
-                QUERO COMEÇAR AGORA
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-white" />
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,12 +1,14 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Gift, Sparkles, Clock, Calendar, Heart, ShieldAlert } from 'lucide-react';
 
 export default function BonusesSection() {
   const bonuses = [
     {
       id: 'b1',
-      title: '30 Aulas Prontas',
-      description: 'Um mês inteiro de aulas já estruturadas utilizando os experimentos da biblioteca, prontas para aplicar em sala.',
+      title: 'BÔNUS 1: 30 Aulas Prontas (Passo a Passo)',
+      badge: 'SALVE SEUS DOMINGOS',
+      description: 'Um mês inteiro de aulas 100% estruturadas com início, meio e fim. Você só precisa abrir o arquivo e aplicar, sem perder um único minuto montando slides ou roteiros.',
+      painPoint: 'Chega de gastar seu domingo à noite preparando slides do zero.',
       illustration: (
         <svg className="w-16 h-16" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Blackboard / Lesson backdrop */}
@@ -33,8 +35,10 @@ export default function BonusesSection() {
     },
     {
       id: 'b2',
-      title: '50 Atividades Prontas para Imprimir',
-      description: 'Atividades e exercícios alinhados aos experimentos para reforçar o aprendizado de forma prática e divertida.',
+      title: 'BÔNUS 2: 50 Atividades Prontas para Imprimir',
+      badge: 'PRATICIDADE TOTAL',
+      description: 'Atividades e exercícios de fixação perfeitamente alinhados aos experimentos. Formatação profissional de alta qualidade, pronta para imprimir e distribuir.',
+      painPoint: 'Economize mais de 40 horas de trabalho formatando documentos no Word.',
       illustration: (
         <svg className="w-16 h-16" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Stacked printable sheets in back */}
@@ -70,8 +74,10 @@ export default function BonusesSection() {
     },
     {
       id: 'b3',
-      title: '100 Avaliações de Ciências Prontas',
-      description: 'Avaliações prontas baseadas nos temas e experimentos, com aplicação simples e imediata.',
+      title: 'BÔNUS 3: 100 Avaliações de Ciências Prontas',
+      badge: 'ALINHAMENTO BNCC',
+      description: 'Chega de quebrar a cabeça elaborando questões difíceis. Avaliações completas com gabarito oficial para você avaliar seus alunos com total segurança e imparcialidade.',
+      painPoint: 'Acabe de vez com as horas perdidas criando provas e buscando gabaritos corretos.',
       illustration: (
         <svg className="w-16 h-16" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Exam document */}
@@ -103,8 +109,10 @@ export default function BonusesSection() {
     },
     {
       id: 'b4',
-      title: 'Guia de Planejamento de Ciências',
-      description: 'Um guia prático para organizar suas aulas e aproveitar os experimentos ao longo de todo o ano letivo.',
+      title: 'BÔNUS 4: Guia de Planejamento de Ciências',
+      badge: 'ORGANIZAÇÃO PERFEITA',
+      description: 'Um cronograma passo a passo para distribuir e integrar os experimentos perfeitamente no seu plano de ensino anual, otimizando o aprendizado ao extremo.',
+      painPoint: 'Tudo pronto e mapeado para você impressionar coordenadores e diretores.',
       illustration: (
         <svg className="w-16 h-16" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(5, 0)">
@@ -153,42 +161,61 @@ export default function BonusesSection() {
   ];
 
   return (
-    <section id="bonuses-section" className="py-10 md:py-20 bg-slate-50/50 border-y border-slate-100">
-      <div className="max-w-4xl mx-auto px-8">
+    <section 
+      id="bonuses-section" 
+      className="py-16 md:py-24 bg-gradient-to-b from-[#ECFDF5] via-[#F0FDF4] to-white border-y border-[#34D399]/20 relative overflow-hidden"
+    >
+      {/* Background organic sparkles/glows */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
+        <div className="absolute left-[-10%] top-[20%] w-[350px] h-[350px] rounded-full bg-[#039D1F]/10 filter blur-3xl" />
+        <div className="absolute right-[-10%] bottom-[10%] w-[400px] h-[400px] rounded-full bg-emerald-300/10 filter blur-3xl" />
+      </div>
 
-         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-600 border border-blue-100 text-[10px] md:text-xs font-black rounded-full mb-3 uppercase tracking-wider">
-            <span className="text-xs">🎁</span>
-            <span>BÔNUS EXCLUSIVOS</span>
-          </div>
-          <h2 className="text-xl xs:text-2xl md:text-3xl font-black text-slate-800 tracking-tight font-display">
-            E tem mais! Leve também:
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+         {/* Highly Persuasive Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#039D1F]/15 text-[#039D1F] border border-[#039D1F]/25 text-xs sm:text-sm font-black rounded-full uppercase tracking-widest shadow-sm select-none"
+          >
+            <Gift className="w-4.5 h-4.5 animate-bounce shrink-0" />
+            <span>PRESENTE EXCLUSIVO EXCELENTE SÓ HOJE</span>
+          </motion.div>
+          
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black text-slate-950 tracking-tight font-display leading-[1.1]">
+            Adquirindo hoje, <span className="text-[#039D1F] font-black underline decoration-emerald-500/20 underline-offset-4">você também recebe:</span>
           </h2>
         </div>
 
-        {/* Bonuses Vertical Stack matching screenshot perfectly */}
-        <div className="space-y-3 md:space-y-5">
+        {/* Bonuses Vertical Stack with robust style and badges */}
+        <div className="space-y-4 md:space-y-6">
           {bonuses.map((bonus, idx) => (
             <motion.div
               key={bonus.id}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.08, duration: 0.4 }}
-              className="bg-white border border-slate-200/60 rounded-2xl p-4 md:p-6 shadow-xs flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-6 hover:shadow-md transition-all duration-300"
+              transition={{ delay: idx * 0.08, duration: 0.5 }}
+              className="bg-white border-2 border-emerald-500/15 rounded-3xl p-5 md:p-8 shadow-md hover:shadow-xl hover:border-emerald-500/35 transition-all duration-300 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 relative overflow-hidden"
             >
+              {/* Corner green flash light decor */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl pointer-events-none" />
+
               {/* Illustration Thumbnail Box */}
-              <div className="w-20 h-20 md:w-28 md:h-28 shrink-0 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center p-1.5 md:p-2 relative overflow-hidden">
+              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-emerald-50/60 border border-emerald-500/10 rounded-2xl flex items-center justify-center p-2.5 relative overflow-hidden shadow-inner">
                 {bonus.illustration}
               </div>
 
               {/* Title & Description Text Block */}
-              <div className="flex-1 space-y-1">
-                <h3 className="text-sm md:text-lg font-black text-slate-800 leading-snug font-display">
+              <div className="flex-1 space-y-3.5">
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight font-display">
                   {bonus.title}
                 </h3>
-                <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-medium">
+                
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
                   {bonus.description}
                 </p>
               </div>
@@ -197,24 +224,30 @@ export default function BonusesSection() {
         </div>
 
         {/* Highlighted Value Banner matching color palette and design */}
-        <div className="mt-8 md:mt-12">
-          <div className="bg-[#038f09] rounded-2xl p-5 md:p-8 text-center text-white font-sans relative overflow-hidden shadow-xl shadow-emerald-950/10">
+        <div className="mt-12 md:mt-16">
+          <div className="bg-[#039D1F] rounded-3xl p-6 md:p-10 text-center text-white font-sans relative overflow-hidden shadow-2xl shadow-emerald-950/20 border border-white/10">
             {/* Background glowing circle decorator */}
-            <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/15 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-emerald-300/15 rounded-full blur-3xl"></div>
             
-            <div className="relative z-10 space-y-2">
-              <span className="text-[10px] md:text-xs font-black tracking-widest text-emerald-100 uppercase block font-mono">
-                VALOR TOTAL DOS BÔNUS
+            <div className="relative z-10 space-y-3 max-w-2xl mx-auto">
+              <span className="text-[11px] md:text-xs font-black tracking-widest text-emerald-100 uppercase block font-mono">
+                VALOR INDIVIDUAL SE FOSSE COMPRAR SEPARADO
               </span>
-              <span className="text-xl md:text-3xl font-extrabold text-white/50 line-through tracking-tight block">
+              
+              <div className="text-2xl md:text-4xl font-black text-white/50 line-through tracking-tight block">
                 R$ 205,00
-              </span>
-              <div className="text-base md:text-xl font-bold tracking-tight text-white flex flex-wrap items-center justify-center gap-1.5">
-                <span>Inclusos</span>
-                <span className="bg-white text-[#038f09] px-2 py-0.5 md:px-2.5 md:py-1 rounded-lg font-black text-[10px] md:text-sm shadow-xs uppercase tracking-wider">
-                  GRÁTIS
+              </div>
+              
+              <p className="text-xl md:text-3xl font-black tracking-tight text-white leading-tight">
+                Leve todos esses materiais <span className="text-amber-300 underline underline-offset-4 decoration-amber-300/40">100% de GRAÇA</span> hoje mesmo no Pacote Completo!
+              </p>
+
+              <div className="pt-2 flex justify-center">
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-white text-[#039D1F] rounded-full font-black text-xs md:text-sm shadow-md uppercase tracking-wider animate-pulse">
+                  <Check className="w-4 h-4 text-[#039D1F] stroke-[3.5]" />
+                  Garantia de Liberação Imediata
                 </span>
-                <span>no Pacote Completo!</span>
               </div>
             </div>
           </div>
